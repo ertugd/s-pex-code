@@ -1,0 +1,28 @@
+# S-PEX — reference environment
+#
+# Install PyTorch first, matched to your CUDA version. The reference runs used
+# CUDA 11.8:
+#   pip install torch==2.7.1 torchvision --index-url https://download.pytorch.org/whl/cu118
+#
+# Then:
+#   pip install -r requirements.txt
+
+# Pinned: Ultralytics changes training defaults between releases, so results
+# are only comparable against the reported numbers on this version.
+ultralytics==8.4.14
+
+torch>=2.7.1
+torchvision>=0.22.1
+
+# Pulled in by ultralytics, listed for reproducibility
+numpy>=1.26
+opencv-python>=4.10
+pillow>=10.0
+pyyaml>=6.0
+matplotlib>=3.8
+pandas>=2.2
+scipy>=1.13
+tqdm>=4.66
+
+# To run the .ipynb files
+jupyter>=1.0
